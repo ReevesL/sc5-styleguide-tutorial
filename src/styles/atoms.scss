@@ -38,11 +38,13 @@
 //
 // .eg-person-info_role_designer - the person is a designer
 // .eg-person-info_role_developer - the person is a software developer
+// .eg-person-info_role_administrator - the person is an administrator
 // default - a normal person
 //
 // markup:
 // <div class="eg-person-info {$modifiers}">
 //   <div class="eg-person-info__name">Name of the person</div>
+//   <div class="eg-person-info__title">Title of the person</div>
 //   <div class="eg-person-info__description">
 //     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
 //     dignissim neque. Suspendisse semper eu metus a congue. Morbi ultrices
@@ -64,6 +66,12 @@
     padding: $eg-spacings;
   }
 
+  .eg-person-info__title {
+    font-size: .9em;
+    background-color: $eg-color-yellow;
+    padding: $eg-spacings;
+  }
+
   .eg-person-info__description {
     padding: $eg-spacings;
   }
@@ -77,6 +85,11 @@
   &.eg-person-info_role_developer {
     .eg-person-info__name {
       background-color: $eg-color-brown;
+    }
+  }
+  &.eg-person-info_role_administrator {
+    .eg-person-info__name {
+      background-color: $eg-color-green;
     }
   }
 }
